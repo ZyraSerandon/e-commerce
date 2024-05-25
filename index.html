@@ -11,11 +11,6 @@
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
-        background {
-            background-size: auto;
-            background-position: auto center;
-            background-repeat: no-repeat; 
-        }
         html,body{
             display: grid;
             height: 100%;
@@ -140,11 +135,22 @@
             text-decoration: underline;
         }
     </style>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.querySelector('input[name="zesrhel"]').value;
+            const password = document.querySelector('input[name="12345"]').value;
+            // You can add additional validation here if needed
+            
+            // For now, just redirect to home.html
+            window.location.href = "home.html";
+        }
+    </script>
 </head>
 <body>
     <div class="wrapper">
         <div class="title">Login Form</div>
-        <form action="home.html" method="GET">
+        <form onsubmit="handleLogin(event)">
             <div class="field">
                 <input type="text" name="zesrhel" required="">
                 <label>Email Address</label>
